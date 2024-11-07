@@ -23,7 +23,7 @@ export function TableUsers() {
         setUsers(users.filter(user => user.id !== id));
       }
     } catch (error) {
-      console.error("Erro ao excluir usuário:", error);
+      console.error("Erro ao excluir usuário:  ", error);
     }
   }
 
@@ -47,7 +47,7 @@ export function TableUsers() {
         }
         setUser(null); 
       } catch (error) {
-        console.error("Erro ao salvar usuário:", error);
+        console.error("Erro ao salvar usuário: ", error);
       }
     }
   }
@@ -59,10 +59,12 @@ export function TableUsers() {
   return (
     <>
       <div className="container">
-        <h2>Demonstrativo de CRUD básico</h2>
-        <div className="cell">
-          <h4>Gerenciamento de usuários</h4>
-          <button className="button" onClick={handleCreateUser}>Criar Novo Usuário</button>
+      <h2>Demonstrativo de CRUD básico</h2>
+        <div className="display"> 
+            <h3>Gerenciamento de usuários</h3>
+            <button className="button" onClick={handleCreateUser}>
+              <i className="fas fa-user-plus"></i>
+            </button>
         </div>
         <div className="table">
           <table>
@@ -83,15 +85,15 @@ export function TableUsers() {
                     <td>{user.email || "N/A"}</td>
                     <td>
                       <div className="cell">
-                        <button className="button" onClick={() => handleEditUser(user)}>Alterar</button>
-                        <button className="button" onClick={() => handleDeleteUser(user.id)}>Excluir</button>
+                        <button className="button" onClick={() => handleEditUser(user)}><i className="fas fa-pen"></i></button>
+                        <button className="button" onClick={() => handleDeleteUser(user.id)}><i className="fas fa-trash"></i></button>
                       </div>
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan={4}>Nenhum usuário encontrado</td>
+                  <td colSpan={4}>Nenhum usuário encontrado.</td>
                 </tr>
               )}
             </tbody>
