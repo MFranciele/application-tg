@@ -1,0 +1,95 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 15%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto; 
+}
+
+table th, table td {
+  padding: 20px; 
+  text-align: left; 
+}
+
+h2, h3 {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.cell {
+  gap: 10px; 
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.edit-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 300px;
+  max-width: 80%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.label {
+  border: none;
+  outline: none; 
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white; 
+  transition: background-color 0.25s;
+}
+
+.label:focus {
+  border: none;
+  outline: none; 
+  background-color: #333; 
+}
