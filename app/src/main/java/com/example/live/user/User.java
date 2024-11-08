@@ -18,7 +18,6 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    //getters and setters
 
     public Long getId(){
         return id;
