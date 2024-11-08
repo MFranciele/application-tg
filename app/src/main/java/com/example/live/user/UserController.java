@@ -20,7 +20,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
     
-
     @GetMapping
     public List<User> getAllUsers() {
         logger.info("[INFO]: Get all users in application");
@@ -29,13 +28,13 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
-        logger.info("[INFO]: Get user in application ", id);
+        logger.info("[INFO]: Get user in application ID {} ", id);
         return userRepository.findById(id).get();        
     }
 
     @PostMapping
     public User CreateUser(@RequestBody User user)  {
-        logger.info("[POST]: Create a user");
+        logger.info("[INFO]: Create a user");
         return userRepository.save(user);
     }
 
@@ -44,7 +43,7 @@ public class UserController {
         User existingUser = userRepository.findById(id).get();
         existingUser.setName(user.getName());
         existingUser.setEmail(user.getEmail());
-        logger.info("[INFO]: Update user ", user);
+        logger.info("[INFO]: Update user with ID {} - Name: {} - Email: {}", id, user.getName(), user.getEmail());
         return userRepository.save(existingUser);
     }
 
@@ -53,7 +52,7 @@ public class UserController {
         try {
             userRepository.findById(id).get();
             userRepository.deleteById(id);
-            logger.info("[INFO]: User deleted successfully");
+            logger.info("[INFO]: User deleted successfully with ID {}", id);
             return "User deleted successfully";
             
         } catch (Exception e) {
