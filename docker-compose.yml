@@ -34,7 +34,7 @@ services:
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
     volumes:
-      - /f/Dev/tg:/app/logs 
+      - /home/client-linux/logs-application:/app/logs 
     depends_on:
       - java_db
     networks:
@@ -52,7 +52,7 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - /f/Dev/tg:/var/log/postgresql 
+      - /home/client-linux/logs-application:/var/log/postgresql 
     networks:
       - tg_network
     

@@ -9,7 +9,7 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CORSConfig {
 
-    private String url = "https://localhost:3001";
+    private String url = "*";
     
     @Bean
     public CorsFilter corsFilter() {
