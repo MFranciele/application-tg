@@ -1,5 +1,5 @@
 FROM node:18-alpine as build
-RUN apt-get install nano -y
+
 WORKDIR  '/web'
 
 ENV PATH /web/node_modules/.bin:$PATH
