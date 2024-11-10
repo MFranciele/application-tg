@@ -9,7 +9,7 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CORSConfig {
 
-    private String url = "*";
+    private String url = "http://20.197.241.238:3000/";
     
     @Bean
     public CorsFilter corsFilter() {
