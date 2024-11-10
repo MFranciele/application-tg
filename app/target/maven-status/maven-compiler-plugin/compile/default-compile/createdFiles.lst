@@ -1,7 +1,5 @@
-com\example\config\CorsConfig.class
+com\example\live\user\User.class
 com\example\live\LiveApplication.class
 com\example\live\user\UserRepository.class
-com\example\live\user\UserController.class
-com\example\live\user\User.class
 com\example\live\config\CORSConfig.class
-com\example\config\CorsConfig$1.class
+com\example\live\user\UserController.class

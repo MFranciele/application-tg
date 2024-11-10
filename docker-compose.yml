@@ -11,12 +11,10 @@ services:
     container_name: react_web
     volumes:
       - ./web/docker/default.conf:/etc/nginx/conf.d/default.conf
-      - ./web/docker/certificates:/etc/nginx/ssl
       - ./logs/nginx/:/var/log/nginx
       
     ports:
       - 3000:80
-      - 3001:443
     depends_on:
       - java_app
     networks:
