@@ -12,6 +12,8 @@ services:
     volumes:
       - ./web/docker/default.conf:/etc/nginx/conf.d/default.conf
       - ./web/docker/certificates:/etc/nginx/ssl
+      - ./logs/nginx/:/var/log/nginx
+      
     ports:
       - 3000:80
       - 3001:443
@@ -34,7 +36,7 @@ services:
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
     volumes:
-      - /home/client-linux/logs-application:/app/logs 
+      - ./logs/app:/app/logs 
     depends_on:
       - java_db
     networks:
@@ -52,7 +54,8 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - /home/client-linux/logs-application:/var/log/postgresql 
+      - ./logs:/var/log/postgresql 
+      - ./db/postgres/:/var/lib/postgresql/data/postgres/postgresql.conf
     networks:
       - tg_network
     
