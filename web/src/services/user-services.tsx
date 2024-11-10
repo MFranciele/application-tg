@@ -1,6 +1,6 @@
 import { userModel } from "../models/user-model";
 
-const url = 'http://20.197.241.238:8080/api/users';
+const url = 'http://localhost:8080/api/users';
 
 export const getUser = async () =>{
   try {
