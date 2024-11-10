@@ -4,7 +4,13 @@ const url = 'http://20.197.241.238:8080/api/users';
 
 export const getUser = async () =>{
   try {
-    const response = await fetch(url);
+    const response = await fetch(url,{
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://20.197.241.238:3000',
+        'Access-Control-Allow-Credentials': 'true'
+      },
+    });
     if(!response.ok){
       throw new Error('Erro ao buscar dados');
     }
@@ -22,6 +28,8 @@ export const createUser = async (user: userModel) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://20.197.241.238:3000',
+        'Access-Control-Allow-Credentials': 'true'
       },
       body: JSON.stringify(user),
     });
@@ -37,7 +45,9 @@ export const updateUser = async (id: number, updatedUser: any) => {
     const response = await fetch(`${url}/${id}`, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://20.197.241.238:3000',
+        'Access-Control-Allow-Credentials': 'true'
       },
       body: JSON.stringify(updatedUser)
     });
@@ -56,7 +66,12 @@ export const updateUser = async (id: number, updatedUser: any) => {
 export const deleteUser = async (id: number) => {
   try {
     const response = await fetch(`${url}/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://20.197.241.238:3000',
+        'Access-Control-Allow-Credentials': 'true'
+      },
     });
     if (!response.ok) {
       throw new Error('Erro ao deletar usuário');
