@@ -16,7 +16,7 @@ services:
       
     ports:
       - 3000:80
-      - 3001:443
+      # - 3001:443
     depends_on:
       - java_app
     networks:
