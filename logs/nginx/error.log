@@ -631,6 +631,7 @@
 2024/11/10 03:22:56 [notice] 1#1: start worker process 35
 2024/11/10 03:22:56 [notice] 1#1: start worker process 36
 2024/11/10 03:22:56 [notice] 1#1: start worker process 37
+<<<<<<< HEAD
 2024/11/10 03:26:44 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
 2024/11/10 03:26:44 [notice] 30#30: gracefully shutting down
 2024/11/10 03:26:44 [notice] 31#31: gracefully shutting down
@@ -674,3 +675,5 @@
 2024/11/10 03:26:44 [notice] 1#1: signal 17 (SIGCHLD) received from 32
 2024/11/10 03:26:44 [notice] 1#1: worker process 32 exited with code 0
 2024/11/10 03:26:44 [notice] 1#1: exit
+=======
+>>>>>>> 175b700e851bd792ef2419694fef3b2071ba0f12
