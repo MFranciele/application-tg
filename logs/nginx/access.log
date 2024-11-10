@@ -1,0 +1,6 @@
+172.30.0.1 - - [10/Nov/2024:01:48:30 +0000] "GET / HTTP/1.1" 400 657 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.30.0.1 - - [10/Nov/2024:01:48:30 +0000] "GET /favicon.ico HTTP/1.1" 400 657 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.30.0.1 - - [10/Nov/2024:01:48:46 +0000] "GET / HTTP/1.1" 200 457 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.30.0.1 - - [10/Nov/2024:01:48:46 +0000] "GET /assets/index-IHdLEw2z.js HTTP/1.1" 200 147037 "https://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.30.0.1 - - [10/Nov/2024:01:48:46 +0000] "GET /assets/index-BfvX59Zh.css HTTP/1.1" 200 2891 "https://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.30.0.1 - - [10/Nov/2024:01:48:46 +0000] "GET /favicon.ico HTTP/1.1" 200 457 "https://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
