@@ -33,11 +33,11 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
+    public User CreateUser(@RequestBody User user)  {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User createUser = userRepository.save(user);
-        logger.info("[INFO]: Created user with ID {} - Name: {} - Email: {}", id, user.getName(), user.getEmail());
-        return createUser;
+        User savedUser = userRepository.save(user);
+        logger.info("[INFO]: Created user with ID {} - Name: {} - Email: {}", savedUser.getId(), savedUser.getName(), savedUser.getEmail());
+        return savedUser;
     }
 
     @PutMapping("/{id}")
