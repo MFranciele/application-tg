@@ -35,8 +35,9 @@ public class UserController {
     @PostMapping
     public User createUser(@RequestBody User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        logger.info("[INFO]: Created user: {}", user);
-        return userRepository.save(user);
+        User createUser = userRepository.save(user);
+        logger.info("[INFO]: Created user with ID {} - Name: {} - Email: {}", id, user.getName(), user.getEmail());
+        return createUser;
     }
 
     @PutMapping("/{id}")
