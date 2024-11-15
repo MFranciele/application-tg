@@ -34,8 +34,9 @@ public class UserController {
 
     @PostMapping
     public User CreateUser(@RequestBody User user)  {
-        logger.info("[INFO]: Create a user", user);
-        return userRepository.save(user);
+        User savedUser = userRepository.save(user);
+        logger.info("[INFO]: Create a user", savedUser);
+        return savedUser;
     }
 
     @PutMapping("/{id}")
